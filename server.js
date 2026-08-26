@@ -15,12 +15,21 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing codes
-app.get("/hello", function(req, res) {
-    res.end(`<h1 style="background: red">HELLO WORLD! by Nathan</h1>`);
+// app.get("/hello", function(req, res) {
+//     res.end(`<h1 style="background: red">HELLO WORLD! by Nathan</h1>`);
+// });
+
+// app.get("/gift", function(req, res) {
+//     res.end(`<h1 style="background: green">Siz sovg'alar sahifasidasiz</h1>`);
+// });
+
+app.post("/create-item", (req, resizeBy) => {
+    console.log(req);
+    resizeBy.json({ test: "success" });
 });
 
-app.get("/gift", function(req, res) {
-    res.end(`<h1 style="background: green">Siz sovg'alar sahifasidasiz</h1>`);
+app.get("/", function(req, resizeBy) {
+    resizeBy.render("harid");
 });
 
 const server = http.createServer(app);
