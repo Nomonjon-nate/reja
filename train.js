@@ -1,51 +1,62 @@
-// MITASK-C :
+// MITASK-D :
 
-const moment = require("moment");
+function checkContent(parametr1, parametr2) {
+    return parametr1.split("").sort().join("") === parametr2.split("").sort().join("");
 
-class Shop {
-    constructor(non, lagmon, cola) {
-        this.non = non;
-        this.lagmon = lagmon;
-        this.cola = cola;
-    }
-
-    qoldiq() {
-        const vaqt = moment().format("HH:mm");
-        console.log(`Hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}kg lagmon va ${this.cola}ta cola mavjud!`);
-    };
-
-    sotish(product, quantity) {
-        console.log(`${product}dan ${quantity}ta sotildi!`);
-        if(product === "non") {
-            this.non -= quantity;
-        } else if(product === "lagmon") {
-            this.lagmon -= quantity;
-        } else if(mahsulot === "cola") {
-            this.cola -= quantity;
-        }
-    }
-
-    qabul(product, quantity) {
-        console.log(`${product}dan ${quantity}ta qabul qilindi!`);
-        if(product === "non") {
-            this.non += quantity;
-        } else if(product === "lagmon") {
-            this.lagmon += quantity;
-        } else if(product === "cola") {
-            this.cola += quantity;
-        } 
-    }
-
+    if(parametr1 !== parametr2);
 }
 
-const market = new Shop(12, 15, 8);
+console.log(checkContent("mita7group", "a7groupmit"));       //true
+console.log(checkContent("mit_a_7_group", "MIT_A_7_group"));   //false
 
-market.qoldiq();
+// MITASK-C :
 
-market.sotish("non", 6);
-market.qabul("cola", 7);
+// const moment = require("moment");
 
-market.qoldiq();
+// class Shop {
+//     constructor(non, lagmon, cola) {
+//         this.non = non;
+//         this.lagmon = lagmon;
+//         this.cola = cola;
+//     }
+
+//     qoldiq() {
+//         const vaqt = moment().format("HH:mm");
+//         console.log(`Hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}kg lagmon va ${this.cola}ta cola mavjud!`);
+//     };
+
+//     sotish(product, quantity) {
+//         console.log(`${product}dan ${quantity}ta sotildi!`);
+//         if(product === "non") {
+//             this.non -= quantity;
+//         } else if(product === "lagmon") {
+//             this.lagmon -= quantity;
+//         } else if(mahsulot === "cola") {
+//             this.cola -= quantity;
+//         }
+//     }
+
+//     qabul(product, quantity) {
+//         console.log(`${product}dan ${quantity}ta qabul qilindi!`);
+//         if(product === "non") {
+//             this.non += quantity;
+//         } else if(product === "lagmon") {
+//             this.lagmon += quantity;
+//         } else if(product === "cola") {
+//             this.cola += quantity;
+//         } 
+//     }
+
+// }
+
+// const market = new Shop(12, 15, 8);
+
+// market.qoldiq();
+
+// market.sotish("non", 6);
+// market.qabul("cola", 7);
+
+// market.qoldiq();
 
 
 // MITASK-A :
