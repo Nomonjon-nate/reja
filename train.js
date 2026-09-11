@@ -1,13 +1,20 @@
+// MITASK-E :
+
+function getReverse(word) {
+  return word.split("").reverse().join("");
+}
+console.log(getReverse("learning python"));
+
 // MITASK-D :
 
-function checkContent(parametr1, parametr2) {
-    return parametr1.split("").sort().join("") === parametr2.split("").sort().join("");
+// function checkContent(parametr1, parametr2) {
+//     return parametr1.split("").sort().join("") === parametr2.split("").sort().join("");
 
-    if(parametr1 !== parametr2);
-}
+//     if(parametr1 !== parametr2);
+// }
 
-console.log(checkContent("mita7group", "a7groupmit"));       //true
-console.log(checkContent("mit_a_7_group", "MIT_A_7_group"));   //false
+// console.log(checkContent("mita7group", "a7groupmit"));       //true
+// console.log(checkContent("mit_a_7_group", "MIT_A_7_group"));   //false
 
 // MITASK-C :
 
